@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+       <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="web-page blur dark-mode">
+            <header>
+                <p class="logo">Edy's Diner<p>
+                <p>The best burguers and pizzas in town</p>
+                <div class="add-btn" id="add-btn">
+                    <button id="add-btn"><i class="fa-solid fa-bowl-food"></i></button>
+                </div>
+                <button class="toggle-dark" id="toggle-dark"><i class="fa-solid fa-sun"></i></button>
+            </header>
+            <main class="menu dark-mode" id="menu">
+            </main>
+            <footer class="dark-mode">
+                <div class="make-order" id="make-order">
+                    <p>Your order</p>
+                    <div class="orders" id="orders">
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <p>Total price:</p>
+                        <p id="total"></p>
+                    </div>
+                    <button class="complete-order" id="complete-order">Complete order</button>
+                </div>
+            </footer>
+            <div class="msg">
+                <div class="thanks-msg" id="thanks-msg">
+                    <p>Thanks Edy, your order is comming</p>
+                </div>
+            </div>
+        </div>
+        <div class="add-menu hidden" id="add-menu">
+            <form>
+                <div>
+                    <label for="name">Dish Name</label>
+                    <input class="input" name="name" type="text" placeholder="Name" required>
+                    <label for="emoji">Emoji</label>
+                    <input class="input" name="emoji" type="text" placeholder="🍞" required>
+                </div>
+                <hr>
+                <label for="ingredients">Dish ingredients (separte by comas)</label>
+                <input type="text" name="ingredients" class="input" placeholder="pepperoni,mushrom,mozarella..." required>
+                <hr>
+                <label for="price">Price in dollars</label>
+                <input type="number" name="price" class="input" placeholder="15" required>
+                <button type="submit">Save</button>
+                <button type="reset">Cancel</button>
+            </form>
+        </div>
+        <div class="payment hidden" id="payment">
+            <form>
+                <h1>Enter card details</h1>
+                <input class="input" type="text" name="name" placeholder="Enter your name" required>
+                <input class="input" type="number" name="card-number" placeholder="Enter card number" required>
+                <input class="input" type="text" name="text" placeholder="Enter CVV" maxlength="3" required>
+                <button type="submit">Pay</button>
+            </form>
+        </div>
+    <script src="https://kit.fontawesome.com/fa4d93c482.js" crossorigin="anonymous"></script>
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
